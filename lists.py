@@ -116,6 +116,45 @@ print(max(squared))
 print("print(sum(squared))")
 print(sum(squared))
 
+#Combine the for loop in the creation of a list (list comprehension) and auto append result.
+print("\nUse list comprehension to create a new list with a for loop in one line of code.")
+new_squared = [value**2 for value in range(1,11)]
+print (new_squared)
 
+#Slice a list using : to define a range based on indeces
+print("\nSlice a list using : to denote a range of indeces.")
+print("Print from the index 3 onwards")
+print(new_squared[3:])
+print("Print from index 3 to index 6")
+print(new_squared[3:6])
+print("Print from start to the 4th index")
+print(new_squared[:4])
+print("Print the last three values in the list")
+print(new_squared[-3:])
 
+#Loop through a list using a slice
+print("\nLoop through a list using a slice")
+for x in new_squared[7:]:
+    print(x)
 
+#Copy a list
+print("\nCopy a list and populate another")
+my_food = ['Burger', 'Fries', 'Soda']
+wife_food = my_food[:]
+print(wife_food)
+
+#Create good and bad values
+bad_food = ['Fries', 'Soda']
+good_food = ['Salad', 'Water']
+
+#Remove values in copied list using a loop
+print("\nRemove bad food from list using a loop.")
+for x in bad_food:
+    wife_food.remove(x)
+print(wife_food)
+
+#Add values to copied list using a loop
+print("\nAdd the good food using a loop.")
+for x in good_food:
+    wife_food.append(x)
+print(wife_food)
